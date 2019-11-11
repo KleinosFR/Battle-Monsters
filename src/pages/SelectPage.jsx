@@ -12,19 +12,16 @@ function SelectPage() {
         <div>
             <Header />
             <UsernameBanner />
-            <Container>
-                <Row>
-                    <Row className="col-10">    
-                        <ExistingMonsters />
-                    </Row>
-                    <Row className="col-2">
-                    <Col xs="12">
-                        <NewMonster />
-                    </Col>
-                    </Row>
-                </Row>
-            </Container>
+            <Row>
+                <Col xs={12} lg={10}>    
+                    <ExistingMonsters />
+                </Col>
+                <Col xs={12} lg={2}>
+                    <NewMonster />
+                </Col>
+            </Row>
         </div>
+    
     )
 }
 

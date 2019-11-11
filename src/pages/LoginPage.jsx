@@ -16,10 +16,10 @@ class LoginPage extends Component {
     render() {
         return (
         <>
-            <Container>
+            <>
                 <Header />
                 <UserLogin />
-            </Container>
+            </>
         </>
         )
     

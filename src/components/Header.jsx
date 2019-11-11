@@ -24,7 +24,7 @@ class Header extends Component {
 
         if (this.state.isHover){
             return(
-        <div className="rowHeader1" onMouseOver={() => this.handleHover()}>
+        <div className="rowHeader1 bg-dark" onMouseOver={() => this.handleHover()}>
             Hackathon m'a tuer
         </div>    
                 
@@ -34,7 +34,7 @@ class Header extends Component {
         else {
             return(
 
-                <div className="rowHeader" onMouseOver={() => this.handleHover()}>
+                <div className="rowHeader bg-dark" onMouseOver={() => this.handleHover()}>
             Battle Monsters
         </div>
             )
