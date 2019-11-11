@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import {Row} from "reactstrap"
 
 import apiCall from "./apiCall"
 import ExistingMonster from "./ExistingMonster";
@@ -12,6 +13,7 @@ class ExistingMonsters extends Component{
             }
         }
     componentDidMount(){
+
         const user = localStorage.getItem('username')
         apiCall.get(`/user/gogetthisone/${user}`)
         .then (res => 
@@ -33,11 +35,11 @@ class ExistingMonsters extends Component{
         const {monsterList, error} = this.state
 
         return(
-            <>
+            <Row>
             {monsterList.map(monster => {
                 return <ExistingMonster {...monster} />}
 )}
-            </>
+            </Row>
 
     )
 }

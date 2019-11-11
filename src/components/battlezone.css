@@ -1,0 +1,33 @@
+#battleZoneDisplay{
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color : rgba(0,0,0,0.3);
+}
+
+#battleZoneGameOver{
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color : rgba(0,0,0,0.3);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+@media (max-width : 576px ){
+
+    #battleZoneDisplay{
+        max-height: 100px;
+        font-size: 14px;
+        width: 100vw;
+        }
+    #battleZoneGameOver{
+        max-height: 100px;
+        font-weight: bold;
+        font-size: 18px;
+        
+    }
+
+}

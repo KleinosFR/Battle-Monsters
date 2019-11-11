@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Row, Container, Button, Col} from "reactstrap"
+import {Row, Button, Col} from "reactstrap"
 import {Redirect} from "react-router-dom"
 
 class UsernameBanner extends Component {
@@ -48,17 +48,18 @@ render() {
     if (this.state.isLogged) {
 
         return(
-            <Container>
-                <Row>
-                    <Col xs="12 text-center">
-                    Your userName {this.state.userName}
-                    <br></br>
-                    <Button type="primary" onClick={()=> this.handleLogOut()}>
+            <div>
+                <Row className="justify-content-between align-items-center bg-dark text-white" style={{minHeight : "20px", paddingBottom : "10px", maxWidth : "100%"}}>
+                    <Col xs={5} xl={2} text-center className="offset-1" >
+                    User : {this.state.userName}
+                    </Col>
+                    <Col xs={5} xl={2} text-center>
+                    <Button  type="primary" onClick={()=> this.handleLogOut()}>
                         Log out
                     </Button>
                     </Col>
                 </Row>
-            </Container>
+            </div>
         )
 
 

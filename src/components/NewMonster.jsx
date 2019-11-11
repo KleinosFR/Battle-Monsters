@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Button, Col, Row } from 'reactstrap';
 import { Link } from "react-router-dom";
 
 import apiCall from './apiCall';
@@ -22,7 +22,7 @@ class NewMonster extends React.Component {
 
     componentDidMount() {
         apiCall
-            .get('/gogetthat')
+            .get('/item/gogetthat')
             .then(res => {
                 const datas = res.data;
                 this.setState({ listMonsters: datas });
@@ -49,24 +49,26 @@ class NewMonster extends React.Component {
         if (selectIsClosed) {
             console.log(this.state.selectIsClosed)
             return (
-                <div>
+                <Col xs={12}>
                     <Button className="fixed" onClick={this.handleSelectIsClosed}>New Monster</Button>
-                </div>
+                </Col>
             )
         } else {
             console.log(this.state.selectIsClosed)
             return (
-                <div>
+                <Col xs={12} className="justify-content-center">
                     <Button onClick={this.handleSelectIsClosed}>New Monster</Button>
                     <SelectMonster monsters={this.state.listMonsters} getMonster={this.getMonster} />
-                    <CardNewMonster {...this.state.selectedMonster} />
+                    <Row className="justify-content-center">
+                        <CardNewMonster  {...this.state.selectedMonster} />
+                    </Row>
                     <Link to={{
                         pathname: "/create",
                         state: { ...this.state.selectedMonster }
                     }}>
-                        <Button tag={Link} >Create New Monster</Button>
+                        <Button>Create New Monster</Button>
                     </Link>
-                </div>
+                </Col>
             );
         }
     }
