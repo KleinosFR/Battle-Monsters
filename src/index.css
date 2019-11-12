@@ -24,7 +24,7 @@ code {
 }
 .card {
     background-image: linear-gradient(to bottom right, rgb(206, 200, 200), rgb(109, 104, 98))!important;
-    border-radius: 100px;
+    border-radius: 10px;
     border: 2px solid #73AD21;
     margin-bottom: 30px;
     box-shadow: 5px 10px 5px grey;
