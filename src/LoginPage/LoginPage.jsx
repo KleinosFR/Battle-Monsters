@@ -3,7 +3,8 @@ import {Container} from "reactstrap"
 
 
 import Header from "../components/Header"
-import UserLogin from "../components/UserLogin"
+import LoginSelect from "./LoginSelect"
+import LoginCarousel from "./LoginCarousel";
 
 
 class LoginPage extends Component {
@@ -16,10 +17,9 @@ class LoginPage extends Component {
     render() {
         return (
         <>
-            <>
                 <Header />
-                <UserLogin />
-            </>
+                <LoginSelect />
+                <LoginCarousel />
         </>
         )
     
