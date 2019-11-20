@@ -56,12 +56,8 @@ const handleSubmit = e =>{
             else{
                 setIsError(true)
                 alert('error while creating the account')
-
             }
-        
-
         })
-
     })
     .catch(err => alert(err))
     }    
