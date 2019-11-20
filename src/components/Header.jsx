@@ -35,7 +35,7 @@ class Header extends Component {
             return(
 
                 <div className="rowHeader bg-dark text-center my-2" onMouseOver={() => this.handleHover()}>
-            Wild Battle Monsters
+            Wild Monsters Battle
         </div>
             )
 
