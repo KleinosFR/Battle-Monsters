@@ -29,7 +29,7 @@ function BetaForm () {
         .then(res => {
             setIsSubmited(true)
         })
-          // Handle errors here however you like, or use a React error boundary
+          // Handle errors
         .catch(err => {
         setIsError(true);
         setErrorMsg(err);
@@ -42,7 +42,7 @@ function BetaForm () {
 
     
 return(
-    <Form className="pr-1" id="betaForm" onSubmit={handleSubmit}>
+    <Form className="pr-xl-1" id="betaForm" onSubmit={handleSubmit}>
         <h3 className="text-center text-warning">Send us your feedback</h3>
             {isSubmited ?
                 isError ? 

@@ -39,7 +39,8 @@ const LoginCarousel = (props) => {
     apiCall.get('/item/gogetit')
     .then(res => {
       const monsters = res.data
-      setMonstersList(monsters)
+      const validMonsters = monsters.filter(monster => monster.name !== null)
+      setMonstersList(validMonsters)
       
     }
     )

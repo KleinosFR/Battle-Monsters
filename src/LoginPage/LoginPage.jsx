@@ -20,12 +20,12 @@ class LoginPage extends Component {
         return (
         <>
                 <Header />
-                <Row className="loginPageBody">
+                <Row className="loginPageBody w-100">
                     <Col xl={6} className="offset-xl-3 offset-0">
                         <LoginSelect />
                         <LoginCarousel />
                     </Col>
-                    <Col xl={2} xs={10} className="my-5 offset-1 offset-xl-0">
+                    <Col xl={2} xs={11} className="my-5 offset-1 offset-xl-0">
                         <BetaForm />
                     </Col>
                     
